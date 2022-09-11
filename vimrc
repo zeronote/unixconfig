@@ -3,8 +3,10 @@ filetype plugin indent on
 set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
-" On pressing tab, insert 4 spaces
+" on pressing tab, insert 4 spaces
 set expandtab
+" highlight current cursorline
+set cursorline
 
 " install vim-plug if not found
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
