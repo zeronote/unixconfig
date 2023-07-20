@@ -19,6 +19,12 @@ copy_hidden_conf() {
     echo "${filename}" copied to $HOME/."${filename}"
 }
 
+if [[ ! -z "$1" ]]; then 
+    backup "$1"
+    copy_hidden_conf "$1"
+    exit 0
+fi
+
 backup ".vimrc"
 backup ".bashrc"
 backup ".tmux.conf"
